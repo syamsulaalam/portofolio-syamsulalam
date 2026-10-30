@@ -1,0 +1,190 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+
+body {
+  background: #0b0d11;
+  color: #c9d1d9;
+  transition: background-color 200ms ease, color 200ms ease;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #eef3fb;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #b7c5dc;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #8ea5c7;
+}
+
+/* Preserve the original dark portfolio palette while keeping the new layout. */
+main section {
+  background-color: #0b0d11 !important;
+  border-color: #161b22 !important;
+}
+
+main section [class*="bg-white"],
+main section [class*="bg-[#f7faff]"],
+main section [class*="bg-[#eaf3ff]"],
+main section [class*="bg-[#eef8f6]"],
+main section [class*="bg-[#f8fbff]"],
+main section [class*="bg-[#f4f8fd]"],
+main section [class*="bg-[#f3f7fc]"],
+main section [class*="bg-[#f1f5fa]"] {
+  background-color: #0e1117 !important;
+}
+
+main section [class*="border-[#d"],
+main section [class*="border-[#c"] {
+  border-color: #21262d !important;
+}
+
+main section [class*="text-[#17233c]"],
+main section [class*="text-[#203656]"],
+main section [class*="text-[#29446d]"],
+main section [class*="text-[#214a85]"],
+main section [class*="text-[#435a7d]"] {
+  color: #f0f6fc !important;
+}
+
+main section [class*="text-[#60718d]"],
+main section [class*="text-[#6c7d98]"],
+main section [class*="text-[#71839d]"],
+main section [class*="text-[#7b8ca5]"],
+main section [class*="text-[#8192ab]"],
+main section [class*="text-[#617492]"],
+main section [class*="text-[#637795]"],
+main section [class*="text-[#8a9ab2]"] {
+  color: #8b949e !important;
+}
+
+main section [class*="text-blue-600"],
+main section [class*="text-blue-700"] {
+  color: #34d399 !important;
+}
+
+main section [class*="bg-blue-100"],
+main section [class*="bg-blue-50"] {
+  background-color: #161b22 !important;
+}
+
+main section [class*="bg-blue-600"],
+main section [class*="bg-[#172f58]"] {
+  background-color: #1f242d !important;
+}
+
+main section [class*="shadow-blue"] {
+  --tw-shadow-color: rgb(0 0 0 / 0.25) !important;
+}
+
+html.light body {
+  background: #f7faff;
+  color: #17233c;
+}
+
+html.light main section {
+  background-color: #f7faff !important;
+  border-color: #dbe5f3 !important;
+}
+
+html.light main section [class*="bg-white"] {
+  background-color: #ffffff !important;
+}
+
+html.light main section [class*="bg-[#f7faff]"],
+html.light main section [class*="bg-[#eaf3ff]"],
+html.light main section [class*="bg-[#eef8f6]"],
+html.light main section [class*="bg-[#f8fbff]"],
+html.light main section [class*="bg-[#f4f8fd]"],
+html.light main section [class*="bg-[#f3f7fc]"],
+html.light main section [class*="bg-[#f1f5fa]"] {
+  background-color: #f8fbff !important;
+}
+
+html.light main section [class*="border-[#d"],
+html.light main section [class*="border-[#c"] {
+  border-color: #dce6f2 !important;
+}
+
+html.light main section [class*="text-[#17233c]"],
+html.light main section [class*="text-[#203656]"],
+html.light main section [class*="text-[#29446d]"],
+html.light main section [class*="text-[#214a85]"],
+html.light main section [class*="text-[#435a7d]"] {
+  color: #203656 !important;
+}
+
+html.light main section [class*="text-[#60718d]"],
+html.light main section [class*="text-[#6c7d98]"],
+html.light main section [class*="text-[#71839d]"],
+html.light main section [class*="text-[#7b8ca5]"],
+html.light main section [class*="text-[#8192ab]"],
+html.light main section [class*="text-[#617492]"],
+html.light main section [class*="text-[#637795]"],
+html.light main section [class*="text-[#8a9ab2]"] {
+  color: #6c7d98 !important;
+}
+
+html.light main section [class*="text-blue-600"],
+html.light main section [class*="text-blue-700"] {
+  color: #2563eb !important;
+}
+
+html.light main section [class*="bg-blue-100"],
+html.light main section [class*="bg-blue-50"] {
+  background-color: #eaf3ff !important;
+}
+
+html.light main section [class*="bg-blue-600"],
+html.light main section [class*="bg-[#172f58]"] {
+  background-color: #172f58 !important;
+}
+
+html.light .experience-section {
+  background-color: #f7faff !important;
+}
+
+html.light .experience-overview,
+html.light .experience-detail,
+html.light .experience-card,
+html.light .experience-modal {
+  background-color: #ffffff !important;
+  border-color: #dce6f2 !important;
+}
+
+html.light .experience-visual {
+  background-color: #f1f5fa !important;
+}
+
+html.light .experience-section [class*="text-[#f0f6fc]"],
+html.light .experience-section [class*="text-[#c9d1d9]"] {
+  color: #203656 !important;
+}
+
+html.light .experience-section [class*="text-[#8b949e]"] {
+  color: #6c7d98 !important;
+}
+
+html.light .theme-toggle {
+  border-color: #cbd8ea;
+  background: #ffffff;
+  color: #1d4ed8;
+  box-shadow: 0 10px 24px rgb(23 47 88 / 0.14);
+}
+
+html.light .theme-toggle:hover {
+  border-color: #60a5fa;
+  background: #eff6ff;
+}

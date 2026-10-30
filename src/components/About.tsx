@@ -1,0 +1,20 @@
+import React, { useEffect, useState } from 'react';
+import { GraduationCap, MapPin, X, ZoomIn } from 'lucide-react';
+import profileImage from '../assets/images/syamsulalamm.jpg';
+
+export const About: React.FC = () => {
+  const [showPhotoModal, setShowPhotoModal] = useState(false);
+  useEffect(() => {
+    if (!showPhotoModal) return;
+    const close = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') setShowPhotoModal(false);
+    };
+    document.body.style.overflow = 'hidden';
+    window.addEventListener('keydown', close);
+    return () => {
+      document.body.style.overflow = '';
+      window.removeEventListener('keydown', close);
+    };
+  }, [showPhotoModal]);
+  return <section id="about" className="border-b border-[#dbe5f3] bg-white py-24"><div className="mx-auto max-w-6xl px-5 sm:px-8"><div className="mb-12"><p className="mb-3 text-xs font-bold uppercase tracking-[0.2em] text-blue-600">03 · About me</p><h2 className="text-3xl font-bold tracking-tight text-[#17233c] sm:text-4xl">Di balik setiap baris kode.</h2></div><div className="grid gap-10 md:grid-cols-12 md:items-center"><div className="md:col-span-4"><div className="rounded-3xl bg-[#eaf3ff] p-3"><div className="group relative overflow-hidden rounded-2xl"><img src={profileImage} alt="Syamsul Alam, S.Kom" className="aspect-[4/5] w-full object-cover object-top transition duration-500 group-hover:scale-105" /><button type="button" onClick={() => setShowPhotoModal(true)} aria-label="Perbesar foto profil" className="absolute bottom-3 right-3 rounded-xl bg-white/90 p-2 text-[#214a85] shadow-lg"><ZoomIn className="h-4 w-4" /></button></div><div className="flex items-center justify-between px-2 pb-1 pt-4"><span className="font-semibold text-[#203656]">Syamsul Alam, S.Kom, MTCNA</span><span className="flex items-center gap-1 text-xs font-medium text-emerald-600"><span className="h-1.5 w-1.5 rounded-full bg-emerald-500" /> open to work</span></div></div><div className="mt-4 flex items-start gap-3 rounded-2xl border border-[#dce6f2] p-4"><GraduationCap className="mt-0.5 h-5 w-5 text-blue-600" /><div><p className="text-sm font-semibold text-[#203656]">Teknik Informatika</p><p className="mt-1 text-xs leading-5 text-[#71839d]">Universitas Muhammadiyah Makassar</p></div></div></div><div className="space-y-6 md:col-span-8"><p className="text-xl leading-9 text-[#435a7d]">Saya adalah individu berlatar belakang Informatika yang tertarik pada pengembangan website modern, responsif, dan fungsional.</p><p className="leading-8 text-[#6c7d98]">Saya berfokus membangun solusi digital melalui teknologi frontend, backend, dan database. Saya menikmati proses menerjemahkan kebutuhan menjadi antarmuka yang rapi, alur yang mudah digunakan, dan fondasi teknis yang dapat dikembangkan.</p><div className="grid gap-3 sm:grid-cols-3"><div className="rounded-2xl bg-[#f4f8fd] p-4"><p className="text-2xl font-bold text-blue-600">UI</p><p className="mt-1 text-xs text-[#71839d]">Clean & responsive</p></div><div className="rounded-2xl bg-[#f4f8fd] p-4"><p className="text-2xl font-bold text-blue-600">API</p><p className="mt-1 text-xs text-[#71839d]">Practical backend</p></div><div className="rounded-2xl bg-[#f4f8fd] p-4"><p className="text-2xl font-bold text-blue-600">DB</p><p className="mt-1 text-xs text-[#71839d]">Structured data</p></div></div><div className="flex items-center gap-2 text-sm text-[#71839d]"><MapPin className="h-4 w-4 text-blue-600" /> Berbasis di Makassar, Indonesia</div></div></div></div>{showPhotoModal && <dialog open className="fixed inset-0 z-50 m-0 flex h-screen w-screen items-center justify-center border-0 bg-[#10213d]/70 p-4 backdrop-blur-sm" onCancel={() => setShowPhotoModal(false)}><div className="relative max-w-lg rounded-2xl bg-white p-2"><img src={profileImage} alt="Syamsul Alam" className="max-h-[80vh] rounded-xl object-contain" /><button type="button" onClick={() => setShowPhotoModal(false)} aria-label="Tutup foto" className="absolute right-4 top-4 rounded-lg bg-white p-2 text-[#203656] shadow"><X className="h-4 w-4" /></button></div></dialog>}</section>;
+};
