@@ -36,5 +36,5 @@ export interface Certificate {
   verificationUrl?: string;
   certificateUrl?: string;
   certificateFileName?: string;
-  certificateType: 'security' | 'networking' | 'certification';
+  certificateType: 'security' | 'networking' | 'certification' | 'data-science' | 'artificial-intelligence';
 }

@@ -135,7 +135,7 @@ export const internshipExperiences: InternshipExperience[] = [
       },
       {
         id: 'documentation-03',
-        title: 'Dokumentasi magang penarikan',
+        title: 'Dokumentasi magang proses pembuatan game',
         date: 'Dokumentasi tersedia',
         description: 'proses praktek membuat game.',
         image: '/images/experience/smp3.JPG',

@@ -89,6 +89,34 @@ main section [class*="shadow-blue"] {
   --tw-shadow-color: rgb(0 0 0 / 0.25) !important;
 }
 
+main section [class~="bg-emerald-50"],
+main section [class~="bg-emerald-50"] [class*="text-emerald-"] {
+  color: #34d399 !important;
+}
+
+main section [class~="bg-emerald-50"] {
+  background-color: rgb(16 185 129 / 0.1) !important;
+}
+
+main section [class~="bg-red-50"] {
+  background-color: rgb(248 81 73 / 0.1) !important;
+  color: #ff7b72 !important;
+}
+
+html.light main section [class~="bg-emerald-50"] {
+  background-color: #ecfdf5 !important;
+}
+
+html.light main section [class~="bg-emerald-50"],
+html.light main section [class~="bg-emerald-50"] [class*="text-emerald-"] {
+  color: #047857 !important;
+}
+
+html.light main section [class~="bg-red-50"] {
+  background-color: #fef2f2 !important;
+  color: #b91c1c !important;
+}
+
 html.light body {
   background: #f7faff;
   color: #17233c;
