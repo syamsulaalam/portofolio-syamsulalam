@@ -180,8 +180,17 @@ html.light main section [class*="bg-[#172f58]"] {
   background-color: #172f58 !important;
 }
 
-html.light .experience-section {
+html.light .experience-section,
+html.light .gallery-section {
   background-color: #f7faff !important;
+}
+
+html.light .experience-overview,
+html.light .experience-detail,
+html.light .experience-card,
+html.light .experience-modal,
+html.light .gallery-card {
+  border-color: #dce6f2 !important;
 }
 
 html.light .experience-overview,
@@ -189,20 +198,74 @@ html.light .experience-detail,
 html.light .experience-card,
 html.light .experience-modal {
   background-color: #ffffff !important;
-  border-color: #dce6f2 !important;
 }
 
-html.light .experience-visual {
+html.light .experience-visual,
+html.light .gallery-card {
   background-color: #f1f5fa !important;
 }
 
 html.light .experience-section [class*="text-[#f0f6fc]"],
-html.light .experience-section [class*="text-[#c9d1d9]"] {
+html.light .experience-section [class*="text-[#c9d1d9]"],
+html.light .gallery-section > div [class*="text-[#f0f6fc]"] {
   color: #203656 !important;
 }
 
-html.light .experience-section [class*="text-[#8b949e]"] {
+html.light .experience-section [class*="text-[#8b949e]"],
+html.light .gallery-section > div [class*="text-[#8b949e]"] {
   color: #6c7d98 !important;
+}
+
+html.light .gallery-filter:not(.gallery-filter-active) {
+  border-color: #dce6f2;
+}
+
+html.light .gallery-filter:not(.gallery-filter-active):hover {
+  color: #203656;
+  border-color: #b7c5dc;
+}
+
+html.light .gallery-filter-active {
+  background-color: #ecfdf5;
+  color: #047857;
+  border-color: #6ee7b7;
+}
+
+@keyframes gallery-fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes gallery-zoom-in {
+  from {
+    opacity: 0;
+    transform: scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.gallery-card {
+  animation: gallery-fade-up 450ms ease-out both;
+}
+
+.gallery-lightbox {
+  animation: gallery-zoom-in 250ms ease-out both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .gallery-card,
+  .gallery-lightbox {
+    animation: none;
+  }
 }
 
 html.light .theme-toggle {

@@ -9,6 +9,8 @@ export interface InternshipDocumentation {
 export interface InternshipExperience {
   id: string;
   institution: string;
+  /** Short label used as the category filter in the gallery. */
+  shortName?: string;
   division: string;
   period: string;
   location: string;
@@ -22,6 +24,7 @@ export const internshipExperiences: InternshipExperience[] = [
   {
     id: 'dinkes-makassar',
     institution: 'Dinas Kesehatan Kota Makassar',
+    shortName: 'Dinkes Makassar',
     division: 'psdk (Devisi Farmasi)',
     period: 'April 2026 - Juni 2026',
     location: 'Jl. Teduh Bersinar No.1, Gn. Sari, Kec. Rappocini, Kota Makassar, Sulawesi Selatan',
@@ -65,6 +68,7 @@ export const internshipExperiences: InternshipExperience[] = [
   {
     id: 'telkom-ed',
     institution: 'PT Telkom Indonesia',
+    shortName: 'Telkom Indonesia',
     division: 'Engineering Departement (ED)',
     period: 'Oktober 2025 - Januari 2026',
     location: 'Jl. A. P. Pettarani No.2, Gn. Sari, Kec. Rappocini, Kota Makassar, Sulawesi Selatan 90221, Indonesia',
@@ -102,6 +106,7 @@ export const internshipExperiences: InternshipExperience[] = [
   {
     id: 'smp-aisyiyah',
     institution: 'SMPAISYIYAHPACCINONGANG',
+    shortName: 'KKP-PLUS SMP Aisyiyah',
     division: 'KULIAH KERJA PRAKTEK (KKP-PLUS)',
     period: 'Februari 2026 - Maret 2026',
     location: 'Paccinongang No.110B, Paccinongang, Kec. Somba Opu, Kabupaten Gowa, Sulawesi Selatan, Indonesia',

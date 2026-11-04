@@ -9,12 +9,13 @@ import { Contact } from './components/Contact';
 import { Footer } from './components/Footer';
 import { ThemeToggle } from './components/ThemeToggle';
 import { Experience } from './components/Experience';
+import { Gallery } from './components/Gallery';
 
 export default function App() {
   const [activeSection, setActiveSection] = useState('home');
 
   useEffect(() => {
-    const sections = ['home', 'projects', 'skills', 'certificates', 'about', 'experience', 'contact'];
+    const sections = ['home', 'projects', 'skills', 'certificates', 'about', 'experience', 'galeri', 'contact'];
 
     const handleScroll = () => {
       const scrollPosition = window.scrollY + 200;
@@ -53,6 +54,7 @@ export default function App() {
         <Certificates />
         <About />
         <Experience />
+        <Gallery />
         <Contact />
       </main>
       <Footer />

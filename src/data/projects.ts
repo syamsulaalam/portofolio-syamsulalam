@@ -27,7 +27,7 @@ export const projectsData: Project[] = [
       type: 'school',
       caption: 'School website preview with clear content hierarchy',
     },
-    githubUrl: 'https://github.com/syamsul-alam',
+    githubUrl: 'https://github.com/syamsulaalam',
   },
   {
     id: '02',
@@ -55,7 +55,7 @@ export const projectsData: Project[] = [
       type: 'cafe',
       caption: 'CafeOrder menu and order summary interface',
     },
-    githubUrl: 'https://github.com/syamsul-alam',
+    githubUrl: 'https://github.com/syamsulaalam',
   },
   {
     id: '03',
@@ -83,7 +83,7 @@ export const projectsData: Project[] = [
       type: 'dashboard',
       caption: 'Portfolio dashboard with project highlights',
     },
-    githubUrl: 'https://github.com/syamsul-alam',
+    githubUrl: 'https://github.com/syamsulaalam',
   },
   {
     id: '04',
@@ -112,7 +112,7 @@ export const projectsData: Project[] = [
       type: 'browser',
       caption: 'Inventory dashboard with summary cards and data table',
     },
-    githubUrl: 'https://github.com/syamsul-alam',
+    githubUrl: 'https://github.com/syamsulaalam',
   },
 ];
 
